@@ -22,16 +22,20 @@ import Home from './components/home';
 import Login from './components/Login'
 import Signup from './components/signup';
 import Dashboard from './components/dashboard';
+import Navbar from './components/components/navbar';
 
 function App() {
   return (
     <Router>
+      <>
+        <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard/>} />
-      </Routes>
+        </Routes>
+        </>
     </Router>
   );
 }
